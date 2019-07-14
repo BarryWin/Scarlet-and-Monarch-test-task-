@@ -1,4 +1,7 @@
+//@import "../fonts/lato/lato"
 @import "../libs/bootstrap/scss/bootstrap"
+//@import '../fonts/Font-awesome/css/all.min.css'
+
 //@import "utils/libs"
 @import "utils/vars"
 @import "utils/fonts"
@@ -9,15 +12,7 @@ html
   font-size: $mainFontSize
   color: $mainFontColor
   height: 100%
-@media screen and (max-width: $desktopWidth)
-  html
-    font-size: 16px
-@media screen and (max-width: $tableWidth)
-  html
-    font-size: 15px
-@media screen and (max-width: $phoneWidth)
-  html
-    font-size: 14px
+
 
 body
   margin: 0
@@ -31,20 +26,167 @@ body
 
 *, *:before, *:after
   box-sizing: border-box
+  margin: 0
+  padding: 0
 
 h1, h2, h3, h4, h5, h6
   margin: 0
 
 a
   text-decoration: none
+  &:hover
+    text-decoration: none
+
 
 ul, li
+  display: inline-block
   margin: 0
   padding: 0
   list-style-type: none
 
 section, .section
   position: relative
+
+header
+  .header_line
+    font-weight: $semiBoldWeight
+    margin-top: 20px
+    margin-bottom: 60px
+    font-size: 12px
+    .left-side
+      ul li
+        .vert-separator
+          display: inline-block
+          vertical-align: bottom
+          margin-left: 30px
+          margin-right: 30px
+          height: 18px
+          width: 1px
+          background-color: $lightGrayColor
+        //&:not(:first-child) a
+        //  margin-left: 30px
+        &.social-links a:not(:last-child)
+          margin-right: 12px
+        &.social-links a:not(:first-child)
+          margin-left: 0
+        a
+          //margin-right: 30px
+          color: $grayColor
+          .ic-glasses
+            margin-right: 10px
+            font-size: 16px
+          .ic-instagram, .ic-twitter, .ic-vk
+            font-size: 14px
+          &:hover
+            color: $darkHoverColor
+            .ic-glasses:before
+              color: $darkHoverColor
+            .ic-instagram,.ic-twitter, .ic-vk
+              background: linear-gradient(241.39deg, $darkHoverColor 0%, $lightHoverColor  100%)
+              -webkit-background-clip: text
+              -webkit-text-fill-color: transparent
+              text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15)
+    .right-side
+      margin-left: auto
+      text-align: right
+      ul li
+        .vert-separator
+          display: inline-block
+          vertical-align: bottom
+          margin-left: 25px
+          margin-right: 25px
+          height: 18px
+          width: 1px
+          background-color: $lightGrayColor
+        //&:not(:first-child)
+        //  border-left: 1px solid $grayColor
+        //&:not(:last-child) a
+        //  margin-right: 25px
+        a
+          color: $grayColor
+          //margin-left: 25px
+          &:hover
+            color: $lightHoverColor
+  .header-logo
+    font-size: 14px
+    .row
+      .sign-in-col
+        text-align: right
+      div[class^="col-md"]
+        display: table
+        height: 54px
+        a
+          display: inline-block
+          width: 216px
+        .phone-number
+          display: table-cell
+          vertical-align: middle
+          font-size: 24px
+          color: $defaultColor
+        .search
+          display: table-cell
+          vertical-align: middle
+          input[type="text"]
+            color: $defaultColor
+            width: 292px
+            height: 25px
+            line-height: 17
+            font-weight: $lightWeight
+            border: none
+            border-bottom: 1px solid #E3E3E3
+            outline: 0
+          button
+            position: relative
+            right: 23px
+            background: none
+            border: none
+            outline: 0
+            &:active
+              .ic-search:before
+                color: #bbb
+        .sign-in
+          display: table-cell
+          vertical-align: middle
+          li
+            .vert-separator
+              display: inline-block
+              vertical-align: bottom
+              height: 23px
+              width: 1px
+              margin-left: 20px
+              margin-right: 20px
+              background-color: $lightGrayColor
+            a
+              color: $defaultColor
+              width: auto
+              i
+                position: relative
+                top: 2px
+                font-size: 18px
+                margin-right: 12px
+                &:before
+                  background: linear-gradient(241.39deg, $darkHoverColor 0%, $lightHoverColor  100%)
+                  -webkit-background-clip: text
+                  -webkit-text-fill-color: transparent
+              &:hover
+                color: $lightHoverColor
+              .counter
+                display: inline
+  .menu
+    margin-top: 60px
+    .menu-grid
+      a
+        text-transform: uppercase
+        font-size: 16px
+        color: $defaultColor
+        letter-spacing: 0.03em
+        line-height: 19px
+        &:hover
+          color: $lightHoverColor
+main
+  margin-top: 50px
+
+
 
 
 
