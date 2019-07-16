@@ -73,11 +73,16 @@ header
           .ic-glasses
             margin-right: 10px
             font-size: 16px
+          .ic-charts
+            margin-right: 10px
+            font-size: 13px
           .ic-instagram, .ic-twitter, .ic-vk
             font-size: 14px
           &:hover
             color: $darkHoverColor
             .ic-glasses:before
+              color: $darkHoverColor
+            .ic-charts:before
               color: $darkHoverColor
             .ic-instagram,.ic-twitter, .ic-vk
               background: linear-gradient(241.39deg, $darkHoverColor 0%, $lightHoverColor  100%)
@@ -105,6 +110,8 @@ header
           //margin-left: 25px
           &:hover
             color: $lightHoverColor
+          &:active
+            color: #0096CB
   #header-logo
     font-size: 14px
     .row
@@ -113,6 +120,7 @@ header
       div[class^="col-md"]
         display: table
         height: 54px
+        position: relative
         a
           display: inline-block
           width: 216px
@@ -122,8 +130,17 @@ header
           font-size: 24px
           color: $defaultColor
         .search
-          display: table-cell
-          vertical-align: middle
+          position: absolute
+          top: 0
+          bottom: 0
+          left: 0
+          right: 0
+          margin: auto
+          display: flex
+          width: 292px
+          align-items: center
+          border-bottom: 1px solid #E3E3E3
+          height: 25px
           input[type="text"]
             color: $defaultColor
             width: 292px
@@ -131,11 +148,10 @@ header
             line-height: 17
             font-weight: $lightWeight
             border: none
-            border-bottom: 1px solid #E3E3E3
             outline: 0
           button
             position: relative
-            right: 23px
+            //right: 23px
             background: none
             border: none
             outline: 0
@@ -181,6 +197,9 @@ header
         line-height: 19px
         &:hover
           color: $lightHoverColor
+        &:active
+          color: #0096CB
+
 main
   margin-top: 50px
   .button
@@ -269,7 +288,8 @@ main
           width: 100%
           z-index: 0
           -webkit-user-drag: none
-  #podbor
+
+  #podbor  //podbor block
     margin-top: 100px
     height: 340px
     .row
@@ -302,7 +322,7 @@ main
         display: block
         margin: auto
 
-  #popular_goods
+  #popular_goods  //goods block
     box-sizing: content-box
     //height: 500px
     padding-left: 5px
@@ -419,6 +439,8 @@ main
                     background-color: $lightHoverColor
                   &:hover .ic-charts:before
                     color: $whiteColor
+                  &:active
+                    background-color: #0096CB
                   .ic-charts::before
                     color: $lightHoverColor
                     transition: color .2s
@@ -435,13 +457,193 @@ main
                     background-color: $lightHoverColor
                     color: $whiteColor
 
-  #discounts
+  #discounts  //discounts block
+    margin-top: 90px
+    h2
+      font-size: 30px
+      font-weight: $semiBoldWeight
+    .discounts-wrapper
+      margin:
+        top: 40px
+        left: auto
+        right: auto
+      display: flex
+      justify-content: space-between
+      .item-blog
+        height: 440px
+        width: 690px
+        background-color: #999999
+        position: relative
+        background-size: cover
+      .blog-1
+        background-image: url("../img/devka2.png")
+      .blog-2
+        background-image: url("../img/devka3.png")
+      .blog-content
+        width: 100%
+        position: absolute
+        padding: 25px 50px
+        bottom: 0
+        left: 0
+        background: linear-gradient(202.4deg, rgba(40, 38, 150, 0.85) 46.3%, $lightHoverColor 121.3%)
+        h3
+          font-size: 24px
+          color: $whiteColor
+          font-weight: $semiBoldWeight
+        p
+          margin-top: 17px
+          font-size: 18px
+          font-weight: $lightWeight
+          color: $whiteColor
+        a
+          margin-top: 16px
+          font-size: 12px
+          text-transform: uppercase
+          color: $whiteColor
+          font-weight: $lightWeight
+          text-decoration: underline
+          letter-spacing: 0.05em
+          &:hover
+            text-decoration: none
+          &:active
+            color: darken(#FFF, 25%)
+
+  #company  //company block
     margin-top: 100px
+    .about-company
+      //height: 580px
+      margin: auto
+      .col-md-6
+        //background-color: #999999
+      .information
+        background-image: url("../img/bc-img.png")
+        background-size: cover
+        padding:
+          top: 60px
+          left: 50px
+          right: 55px
+          bottom: 40px
+        color: $whiteColor
+        h2
+          font-size: 30px
+        p
+          margin-top: 26px
+          font-size: 18px
+          font-weight: $lightWeight
+        a
+          margin-top: 16px
+          font-size: 12px
+          text-transform: uppercase
+          color: $whiteColor
+          font-weight: $lightWeight
+          text-decoration: underline
+          letter-spacing: 0.05em
+          &:hover
+            text-decoration: none
+          &:active
+            color: darken(#FFF, 25%)
+      .image
+        background-image: url('../img/photo_about.png')
+        background-size: cover
 
-
-
-
-
+footer
+  margin-top: 100px
+  #footer-menu
+    .menu-links
+      text-transform: uppercase
+      font-size: 16px
+      ul
+        display: flex
+        justify-content: space-between
+      a
+        color: $defaultColor
+        font-size: 16px
+        letter-spacing: 0.03em
+        line-height: 20px
+        &:hover
+          color: $lightHoverColor
+        &:active
+          color: #0096CB
+  #footer-information
+    margin-top: 52px
+    font-size: 16px
+    color: $defaultColor
+    font-weight: $lightWeight
+    h4
+      margin-bottom: 28px
+      color: #282696
+      font-size: 16px
+      text-transform: uppercase
+      font-weight: $mainFontWeight
+    .foot-col-1
+      padding-right: 72px
+    .foot-col-3
+      .phone-number
+        font-size: 24px
+        font-weight: $semiBoldWeight
+      a
+        text-decoration: underline
+        &:visited
+      .social-links
+        margin-top: 15px
+        a
+          text-decoration: none
+        span
+          margin-right: 12px
+          font-weight: $mainFontWeight
+        a:not(:last-child)
+          margin-right: 12px
+        a:hover
+          color: $darkHoverColor
+          .ic-instagram,.ic-twitter, .ic-vk
+            background: linear-gradient(241.39deg, $darkHoverColor 0%, $lightHoverColor  100%)
+            -webkit-background-clip: text
+            -webkit-text-fill-color: transparent
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15)
+    .foot-col-4
+      .mail
+        display: flex
+        margin-bottom: 23px
+        input[type="email"]
+          width: 274px
+          height: 40px
+          border: none
+          background-color: #f7f7f7
+          padding: 18px 11px
+          outline: none
+        .email-btn
+          position: relative
+          border: none
+          background: linear-gradient(228.78deg, rgba(40, 38, 150, 0.96) 0%, #09ABE4 100%)
+          height: 40px
+          width: 40px
+          &::before
+            content: ""
+            position: absolute
+            top: 0
+            bottom: 0
+            left: 0
+            right: 0
+            margin: auto
+            background-image: url("../img/arrow-btn.png")
+            background-position: center center
+            background-repeat: no-repeat
+      a
+        text-decoration: underline
+      a:last-child
+        float: left
+        margin-top: 10px
+  #footer-bottom
+    margin-top: 30px
+    margin-bottom: 100px
+    font-weight: $lightWeight
+    .terms-use
+      font-size: 16px
+      color: $defaultColor
+    .credit-cards
+      span
+        font-size: 14px
+        color: $grayColor
 
 @import "utils/media"
 // Modules

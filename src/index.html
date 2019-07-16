@@ -24,8 +24,9 @@
                         <span class="vert-separator"></span>
                     </li>
                     <li>
-                        <span class="chart"></span>
-                        <a href="javascript:void(0);">Сравнение товаров</a>
+
+                        <a href="javascript:void(0);">
+                            <i class="ic-charts"></i>Сравнение товаров</a>
                         <span class="vert-separator"></span>
                     </li>
                     <li class="social-links">
@@ -202,7 +203,6 @@
         </div>
     </section>
     <section id="popular_goods">
-
         <h2 class="container">Популярные товары</h2>
         <div class="swiper-goods-container">
             <div class="swiper-wrapper">
@@ -223,9 +223,9 @@
                                 </div>
                                 <div class="toBasket">
                                     <button class="compare-but" title="Сравнить">
-                                      <i class="ic-charts"></i>
+                                        <i class="ic-charts"></i>
                                     </button>
-                                    <button class="toBasket-but">в корзину</button>
+                                    <button class="toBasket-but" title="Добавить в корзину">в корзину</button>
                                 </div>
                             </div>
                         </div>
@@ -246,9 +246,9 @@
                                 </div>
                                 <div class="toBasket">
                                     <button class="compare-but" title="Сравнить">
-                                      <i class="ic-charts"></i>
+                                        <i class="ic-charts"></i>
                                     </button>
-                                    <button class="toBasket-but">в корзину</button>
+                                    <button class="toBasket-but" title="Добавить в корзину">в корзину</button>
                                 </div>
                             </div>
                         </div>
@@ -271,9 +271,9 @@
                                 </div>
                                 <div class="toBasket">
                                     <button class="compare-but" title="Сравнить">
-                                      <i class="ic-charts"></i>
+                                        <i class="ic-charts"></i>
                                     </button>
-                                    <button class="toBasket-but">в корзину</button>
+                                    <button class="toBasket-but" title="Добавить в корзину">в корзину</button>
                                 </div>
                             </div>
                         </div>
@@ -295,7 +295,7 @@
                                     <button class="compare-but" title="Сравнить">
                                         <i class="ic-charts"></i>
                                     </button>
-                                    <button class="toBasket-but">в корзину</button>
+                                    <button class="toBasket-but" title="Добавить в корзину">в корзину</button>
                                 </div>
                             </div>
                         </div>
@@ -319,8 +319,110 @@
         </div>
     </section>
     <section id="discounts" class="container">
-        <div class="">sss</div>
+        <h2>Акции</h2>
+        <div class="discounts-wrapper">
+            <div class="item-blog blog-1">
+                <div class="blog-content">
+                    <h3>Скидка 25% на очки DAVIDOFF</h3>
+                    <p>На все очки DAVIDOFF весенней коллекции</p>
+                    <a href="#more">Подробнее</a>
+                </div>
+            </div>
+            <div class="item-blog blog-2">
+                <div class="blog-content">
+                    <h3>Акция при покупке детских очков</h3>
+                    <p>Оправа для очков со скидкой 50%</p>
+                    <a href="#more">Подробнее</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="company" class="container">
+        <div class="about-company row">
+            <div class="col-md-6 information">
+                <h2>О компании</h2>
+                <p>Открытие в 2003 году ООО” Оптик – Центр” стало большим событием в оказании медицинской помощи
+                    населению города и предоставило возможность нашим клиентам проверить зрение без записи и
+                    очередей.</p>
+                <p>Основным направлением нашей деятельности является оказание качественных услуг по проверке зрения,
+                    подбору контактных линз и диагностике заболеваний глаз. Мы ведем индивидуальную работу с каждым
+                    клиентом, независимо от возраста и социального статуса.</p>
+                <p>Наши высококвалифицированные специалисты имеют большой опыт работы в сфере здравоохранения, решают
+                    различные проблемы со зрением, постоянно участвуют в семинарах по современным методам коррекции
+                    зрения и съездах офтальмологов России.</p>
+                <a href="#more">Подробнее</a>
+            </div>
+            <div class="col-md-6 image d-sm-none d-md-block"></div>
+        </div>
     </section>
 </main>
+<footer class="container">
+    <section id="footer-menu" class="row align-items-center">
+        <div class="col-md-3 logo">
+            <img src="img/logo.svg" alt="Logo">
+        </div>
+        <div class="col-md-9 menu-links">
+            <ul>
+                <li><a href="">Каталог</a></li>
+                <li><a href="">ОМС</a></li>
+                <li><a href="">О компании</a></li>
+                <li><a href="">Акции</a></li>
+                <li><a href="">Розничная сеть</a></li>
+                <li><a href="">Партнеры</a></li>
+                <li><a href="">Подбор очков</a></li>
+            </ul>
+        </div>
+    </section>
+    <section id="footer-information" class="row">
+        <div class="col-md-3 foot-col-1">
+            <p>ООО «Оптик-Центр» <br> ОГРН 1032901007853</p>
+            <p>164500, г. Северодвинск,
+                ул. Ломоносова, д. 73</p>
+            <p>Информация на сайте не является публичной офертой и носит справочный характер. </p>
+
+        </div>
+        <div class="col-md-3 foot-col-2">
+            <h4>Магазины</h4>
+            <p>164500, г. Северодвинск, ул. Советская, д. 50/12</p>
+            <p>163000, г. Архангельск, ул. набережная Северной Двины, д. 93</p>
+        </div>
+        <div class="col-md-3 foot-col-3">
+            <h4>Контактная информация</h4>
+            <p class="phone-number">(8184) 52-96-33</p>
+            <a href="">office@moda-optic.ru</a>
+            <div class="social-links">
+                <span>Мы в соц.сетях:</span>
+                <a href=""><i class="ic-instagram"></i></a>
+                <a href=""><i class="ic-twitter"></i></a>
+                <a href=""><i class="ic-vk"></i></a>
+            </div>
+        </div>
+        <div class="col-md-3 foot-col-4">
+            <p>Подпишитесь на наши новости и акции,
+                чтобы быть в курсе</p>
+            <form action="" class="mail">
+                <input type="email" name="email" placeholder="Ваш e-mail">
+                <button class="email-btn"></button>
+            </form>
+            <a href="">Договор оферты</a>
+            <a href="">Политика конфиденциальности</a>
+        </div>
+    </section>
+    <section id="footer-bottom" class="row justify-content-between align-items-center">
+        <div class="col-md-6 terms-use">
+            <p>Интернет-магазин “Мода-оптик”. <a href="">Пользовательское соглашение</a>
+                <br> Имеются противопоказания, необходимо проконсультироваться со специалистом</p>
+        </div>
+        <div class="col-md-3 credit-cards">
+            <span>Принимаем к оплате:</span>
+            <img src="img/payments/visa.svg" alt="visa">
+            <img src="img/payments/mastercard.svg" alt="">
+            <img src="img/payments/maestro.svg" alt="">
+            <img src="img/payments/mir.svg" alt="">
+        </div>
+    </section>
+</footer>
 </body>
 </html>

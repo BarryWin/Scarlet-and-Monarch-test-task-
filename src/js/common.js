@@ -15,15 +15,10 @@ var mySwiper = new Swiper('.swiper-container', {
         delay: 5000,
     },
 });
-//swiperMouseOver
-    let slider = document.getElementById("slider");
-
-        slider.addEventListener("mouseover", function () {
-            mySwiper.autoplay.stop();
-        });
-        slider.addEventListener("mouseout", function () {
-            mySwiper.autoplay.start();
-        });
+//swiper autoplay disabled onmouseover
+let slider = document.getElementById("slider");
+    slider.addEventListener("mouseover", () => mySwiper.autoplay.stop());
+    slider.addEventListener("mouseout", () => mySwiper.autoplay.start());
 
 var swiper2 = new Swiper('.swiper-goods-container', {
     loop: true,
@@ -39,12 +34,7 @@ var swiper2 = new Swiper('.swiper-goods-container', {
         delay: 5000,
     },
 });
-    let slider2 = document.getElementById("popular_goods");
-
-        slider2.addEventListener("mouseover", function () {
-            swiper2.autoplay.stop();
-        });
-        slider2.addEventListener("mouseout", function () {
-            swiper2.autoplay.start();
-    });
-
+//swiper autoplay disabled onmouseover
+let slider2 = document.getElementById("popular_goods");
+    slider2.addEventListener("mouseover", () => swiper2.autoplay.stop());
+    slider2.addEventListener("mouseout", () => swiper2.autoplay.start());
