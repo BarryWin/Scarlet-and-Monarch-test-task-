@@ -1,3 +1,6 @@
 import './js/common'
-import './css/main.css'
 import './sass/main.sass'
+
+// import 'swiper/dist/css/swiper.min.css'
+
+// import './css/main.css'

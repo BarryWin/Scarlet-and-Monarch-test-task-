@@ -5,14 +5,15 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Мода оптик</title>
     <link rel="stylesheet" href="fonts/icomoon/ic-test.css">
     <!--    <link rel="stylesheet" href="dist/js/main.css">-->
     <!--    <script src="dist/js/common.js"></script>-->
-    <title>Document</title>
 </head>
-<body class="container">
-<header>
-    <section class="header_line">
+<body>
+<header class="container">
+    <section id="header_line">
         <div class="row justify-content-between">
             <div class="col-md-6 left-side">
                 <ul>
@@ -51,7 +52,7 @@
             </div>
         </div>
     </section>
-    <section class="header-logo">
+    <section id="header-logo">
         <div class="row">
             <div class="col-md-3 logo-col">
                 <a href="index.html">
@@ -64,7 +65,7 @@
             <div class="col-md-3 search-col">
                 <form action="#" class="search">
                     <input type="text" placeholder="Искать" name="search">
-                    <button type="submit"><i class="ic-search" onclick="event.preventDefault();"></i></button>
+                    <button type="submit" onclick="return false;"><i class="ic-search"></i></button>
                 </form>
             </div>
             <div class="col-md-3 sign-in-col">
@@ -80,38 +81,246 @@
             </div>
         </div>
     </section>
-    <section class="menu">
+    <section id="menu">
         <div class="menu-grid row justify-content-between">
-            <div class="col-auto"><a href="#">Каталог</a></div>
-            <div class="col-auto"><a href="#">О Компании</a></div>
-            <div class="col-auto"><a href="#">Омс</a></div>
-            <div class="col-auto"><a href="#">Акции</a></div>
-            <div class="col-auto"><a href="#">Розничная сеть</a></div>
-            <div class="col-auto"><a href="#">Партнеры</a></div>
-            <div class="col-auto"><a href="#">Контакты</a></div>
-            <div class="col-auto"><a href="#">Подбор очков</a></div>
+            <div class="col-auto">
+                <a href="#">Каталог</a>
+            </div>
+            <div class="col-auto">
+                <a href="#">О Компании</a>
+            </div>
+            <div class="col-auto">
+                <a href="#">Омс</a>
+            </div>
+            <div class="col-auto">
+                <a href="#">Акции</a>
+            </div>
+            <div class="col-auto">
+                <a href="#">Розничная сеть</a>
+            </div>
+            <div class="col-auto">
+                <a href="#">Партнеры</a>
+            </div>
+            <div class="col-auto">
+                <a href="#">Контакты</a>
+            </div>
+            <div class="col-auto">
+                <a href="#">Подбор очков</a>
+            </div>
         </div>
     </section>
 </header>
 
 <main>
-    <section class="slider">
+    <section id="slider" class="container">
+        <div class="swiper-container">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <div class="row slider-block1">
+                        <div class="col-md-5 left-side">
+                            <img src="img/slider1/bc-img.png" alt="bc">
+                            <div class="slider-content">
+                                <h2>Новая коллекция
+                                    солнечных очков</h2>
+                                <p>Весь ассортимент популярного
+                                    бренда в нашем интернет-магазине</p>
+                                <a href="javascript:void(0);" class="button">Перейти в каталог</a>
+                            </div>
+                        </div>
+                        <div class="col-md-7 right-side">
+                            <img src="img/slider1/devka1.png" alt="bc">
+                        </div>
+                    </div>
+                </div>
 
+                <div class="swiper-slide">
+                    <div class="row slider-block1">
+                        <div class="col-md-5 left-side">
+                            <img src="img/slider1/bc-img.png" alt="bc">
+                            <div class="slider-content">
+                                <h2>Fashion collection dolor sit amet.</h2>
+                                <p>Весь ассортимент популярного
+                                    бренда в нашем интернет-магазине</p>
+                                <a href="javascript:void(0);" class="button">Перейти в каталог</a>
+                            </div>
+                        </div>
+                        <div class="col-md-7 right-side">
+                            <img src="img/slider1/devka2.png" alt="bc">
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="row slider-block1">
+                        <div class="col-md-5 left-side">
+                            <img src="img/slider1/bc-img.png" alt="bc">
+                            <div class="slider-content">
+                                <h2>Fashion collection dolor sit amet.</h2>
+                                <p>Весь ассортимент популярного
+                                    бренда в нашем интернет-магазине</p>
+                                <a href="javascript:void(0);" class="button">Перейти в каталог</a>
+                            </div>
+                        </div>
+                        <div class="col-md-7 right-side">
+                            <img src="img/slider1/devka3.png" alt="bc">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev">
+                <!-- svg arrows copied from layout-->
+                <svg width="10" height="27" viewBox="0 0 10 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.84227 1.53905C10.14 1.07388 10.0042 0.45544 9.53905 0.157729C9.07388 -0.139983 8.45544 -0.0042274 8.15773 0.460946L9.84227 1.53905ZM1 13.5L0.157729 12.9609C-0.0525762 13.2895 -0.0525762 13.7105 0.157729 14.0391L1 13.5ZM8.15773 26.5391C8.45544 27.0042 9.07388 27.14 9.53905 26.8423C10.0042 26.5446 10.14 25.9261 9.84227 25.4609L8.15773 26.5391ZM8.15773 0.460946L0.157729 12.9609L1.84227 14.0391L9.84227 1.53905L8.15773 0.460946ZM0.157729 14.0391L8.15773 26.5391L9.84227 25.4609L1.84227 12.9609L0.157729 14.0391Z"
+                          fill="white" fill-opacity="0.8"/>
+                </svg>
+            </div>
+            <div class="swiper-button-next">
+                <svg width="10" height="27" viewBox="0 0 10 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.157728 25.4609C-0.139982 25.9261 -0.00422764 26.5446 0.460946 26.8423C0.92612 27.14 1.54456 27.0042 1.84227 26.5391L0.157728 25.4609ZM9 13.5L9.84227 14.0391C10.0526 13.7105 10.0526 13.2895 9.84227 12.9609L9 13.5ZM1.84227 0.460947C1.54456 -0.00422668 0.92612 -0.139982 0.460946 0.15773C-0.00422764 0.455441 -0.139982 1.07388 0.157728 1.53905L1.84227 0.460947ZM1.84227 26.5391L9.84227 14.0391L8.15773 12.9609L0.157728 25.4609L1.84227 26.5391ZM9.84227 12.9609L1.84227 0.460947L0.157728 1.53905L8.15773 14.0391L9.84227 12.9609Z"
+                          fill="white" fill-opacity="0.8"/>
+                </svg>
+            </div>
+        </div>
     </section>
-    <section class="podbor">
-
+    <section id="podbor" class="container">
+        <div class="row">
+            <div class="col-md-6 left-side">
+                <div class="podbor-content">
+                    <h2>Подбор очков</h2>
+                    <p>Поможем Вам подобрать очки, с нужными характеристиками
+                        из нашего огромного ассортимента</p>
+                    <a href="javascript:void(0);" class="button">Подобрать</a>
+                </div>
+            </div>
+            <div class="col-md-6 right-side">
+                <img src="img/glasses.png" alt="очки">
+            </div>
+        </div>
     </section>
-    <section class="popular_goods">
+    <section id="popular_goods">
 
+        <h2 class="container">Популярные товары</h2>
+        <div class="swiper-goods-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="row slider2-content">
+                        <div class="col-12 upper-side">
+                            <span class="new">
+                                Новинка
+                            </span>
+                            <img src="img/slider2/glasses1.png" alt="">
+                        </div>
+                        <div class="col-12 down-side">
+                            <h4>DAVIDOFF Urban Coolness Sunglasses</h4>
+                            <div class="wrapper-price">
+                                <div class="price">
+                                    <span class="item-price">14500 руб.</span>
+                                    <span class="old-price">14500 руб.</span>
+                                </div>
+                                <div class="toBasket">
+                                    <button class="compare-but" title="Сравнить">
+                                      <i class="ic-charts"></i>
+                                    </button>
+                                    <button class="toBasket-but">в корзину</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="row slider2-content">
+                        <div class="col-12 upper-side">
+                            <img src="img/slider2/lenses.png" alt="">
+                        </div>
+                        <div class="col-12 down-side">
+                            <h4>ACUVUE OASYS with HydraLuxe
+                                (30 линз)</h4>
+                            <div class="wrapper-price">
+                                <div class="price">
+                                    <span class="item-price">14500 руб.</span>
+                                    <span class="old-price"></span>
+                                </div>
+                                <div class="toBasket">
+                                    <button class="compare-but" title="Сравнить">
+                                      <i class="ic-charts"></i>
+                                    </button>
+                                    <button class="toBasket-but">в корзину</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="row slider2-content">
+                        <div class="col-12 upper-side">
+                            <span class="new">
+                                Новинка
+                            </span>
+                            <img src="img/slider2/glasses2.png" alt="">
+                        </div>
+                        <div class="col-12 down-side">
+                            <h4>BULGARI NV-2345 Sunglasses</h4>
+                            <div class="wrapper-price">
+                                <div class="price">
+                                    <span class="item-price">14500 руб.</span>
+                                    <span class="old-price"></span>
+                                </div>
+                                <div class="toBasket">
+                                    <button class="compare-but" title="Сравнить">
+                                      <i class="ic-charts"></i>
+                                    </button>
+                                    <button class="toBasket-but">в корзину</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="row slider2-content">
+                        <div class="col-12 upper-side">
+                            <img src="img/slider2/glasses3.png" alt="">
+                        </div>
+                        <div class="col-12 down-side">
+                            <h4>DAVIDOFF Urban Coolness Sunglasses</h4>
+                            <div class="wrapper-price">
+                                <div class="price">
+                                    <span class="item-price">14500 руб.</span>
+                                    <span class="old-price">14500 руб.</span>
+                                </div>
+                                <div class="toBasket">
+                                    <button class="compare-but" title="Сравнить">
+                                        <i class="ic-charts"></i>
+                                    </button>
+                                    <button class="toBasket-but">в корзину</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Add Pagination -->
+            <!-- svgs again -->
+            <div class="swiper-button-prev">
+                <svg width="10" height="27" viewBox="0 0 10 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.84227 1.53905C10.14 1.07388 10.0042 0.45544 9.53905 0.157729C9.07388 -0.139983 8.45544 -0.0042274 8.15773 0.460946L9.84227 1.53905ZM1 13.5L0.157729 12.9609C-0.0525762 13.2895 -0.0525762 13.7105 0.157729 14.0391L1 13.5ZM8.15773 26.5391C8.45544 27.0042 9.07388 27.14 9.53905 26.8423C10.0042 26.5446 10.14 25.9261 9.84227 25.4609L8.15773 26.5391ZM8.15773 0.460946L0.157729 12.9609L1.84227 14.0391L9.84227 1.53905L8.15773 0.460946ZM0.157729 14.0391L8.15773 26.5391L9.84227 25.4609L1.84227 12.9609L0.157729 14.0391Z"
+                          fill="#BDBDBD" fill-opacity="0.8"/>
+                </svg>
+            </div>
+            <div class="swiper-button-next">
+                <svg width="10" height="27" viewBox="0 0 10 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.157728 25.4609C-0.139982 25.9261 -0.00422764 26.5446 0.460946 26.8423C0.92612 27.14 1.54456 27.0042 1.84227 26.5391L0.157728 25.4609ZM9 13.5L9.84227 14.0391C10.0526 13.7105 10.0526 13.2895 9.84227 12.9609L9 13.5ZM1.84227 0.460947C1.54456 -0.00422668 0.92612 -0.139982 0.460946 0.15773C-0.00422764 0.455441 -0.139982 1.07388 0.157728 1.53905L1.84227 0.460947ZM1.84227 26.5391L9.84227 14.0391L8.15773 12.9609L0.157728 25.4609L1.84227 26.5391ZM9.84227 12.9609L1.84227 0.460947L0.157728 1.53905L8.15773 14.0391L9.84227 12.9609Z"
+                          fill="#BDBDBD" fill-opacity="0.8"/>
+                </svg>
+            </div>
+        </div>
+    </section>
+    <section id="discounts" class="container">
+        <div class="">sss</div>
     </section>
 </main>
-<h1>WEBPACK Hello World!</h1>
-<h2>Good news again</h2>
-<div class="row justify-content-center text-center">
-    <div class="col-2">2</div>
-    <div class="col-2">2</div>
-    <div class="col-2">2</div>
-    <div class="col-2">2</div>
-</div>
 </body>
 </html>

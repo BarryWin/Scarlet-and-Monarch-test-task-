@@ -19,9 +19,9 @@ module.exports = {
     // module: `${PATHS.src}/your-module.js`,
   },
   output: {
-    filename: `js/common.js`,
+    filename: `js/bundle.js`,
     path: `${PATHS.dist}`,
-    publicPath: `/`
+    publicPath: ``
   },
   // optimization: {
   //   splitChunks: {
@@ -38,20 +38,29 @@ module.exports = {
   module: {
     rules: [{
       test: /\.js$/,
-      loader: 'babel-loader',
-      exclude: '/node_modules/'
+      // loader: 'babel-loader',
+      // exclude: '/node_modules/'
     }, {
       test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
-      loader: 'file-loader',
-      options: {
-        name: '[name].[ext]'
-      }
+      use: [
+        {
+          loader: 'file-loader',
+          options: {
+            name: '[name].[ext]',
+          }
+        }
+      ]
     }, {
       test: /\.(png|jpg|gif|svg)$/,
-      loader: 'file-loader',
-      options: {
-        name: '[name].[ext]'
-      }
+      use:[
+          {
+            loader: "file-loader",
+            options: {
+              name: '[name].[ext]',
+              publicPath: `/`
+            }
+          },
+      ]
     }, {
       test: /\.(sass|scss)$/,
       use: [
@@ -60,10 +69,13 @@ module.exports = {
         {
           loader: 'css-loader',
           options: { sourceMap: true }
-        }, {
+        },
+        {
           loader: 'postcss-loader',
           options: { sourceMap: true, config: { path: `./postcss.config.js` } }
-        }, {
+        }
+        ,
+        {
           loader: 'sass-loader',
           options: { sourceMap: true }
         }

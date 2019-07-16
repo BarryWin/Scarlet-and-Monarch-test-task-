@@ -1,4 +1,5 @@
 //@import "../fonts/lato/lato"
+@import "../libs/swiper/dist/css/swiper.min"
 @import "../libs/bootstrap/scss/bootstrap"
 //@import '../fonts/Font-awesome/css/all.min.css'
 
@@ -20,9 +21,6 @@ body
   font-family: $mainFont
   font-size: $mainFontSize
   font-weight: $mainFontWeight
-  -webkit-font-smoothing: antialiased
-  -moz-osx-font-smoothing: grayscale
-
 
 *, *:before, *:after
   box-sizing: border-box
@@ -48,7 +46,7 @@ section, .section
   position: relative
 
 header
-  .header_line
+  #header_line
     font-weight: $semiBoldWeight
     margin-top: 20px
     margin-bottom: 60px
@@ -107,7 +105,7 @@ header
           //margin-left: 25px
           &:hover
             color: $lightHoverColor
-  .header-logo
+  #header-logo
     font-size: 14px
     .row
       .sign-in-col
@@ -172,7 +170,7 @@ header
                 color: $lightHoverColor
               .counter
                 display: inline
-  .menu
+  #menu
     margin-top: 60px
     .menu-grid
       a
@@ -185,6 +183,261 @@ header
           color: $lightHoverColor
 main
   margin-top: 50px
+  .button
+    width: 230px
+    height: 50px
+    display: inline-block
+    line-height: 50px
+    text-align: center
+    border: 0.75px solid #FFFFFF
+    text-transform: uppercase
+    color: #ffffff
+    font-size: 14px
+    transition: background-color .3s, color .3s, transform 50ms
+    &:hover
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+      background-color: #ffffff
+      color: $darkHoverColor
+    &:active
+      transform: translateY(2px)
+      box-shadow: 0 0 2px rgba(0, 0, 0, 0.25)
+  #slider
+    height: 550px
+    .swiper-container
+      height: 100%
+      width: 100%
+    .swiper-button-prev, .swiper-button-next
+      background: none
+      outline: 0
+      height: 25px
+      width: 8px
+    .swiper-button-prev
+      left: 40px
+    .swiper-button-next
+      right: 40px
+    .swiper-pagination
+      width: auto
+      left: 90px
+      bottom: 50px
+      .swiper-pagination-bullet
+        background-color: transparent
+        border: 1px solid #FFF
+      .swiper-pagination-bullet-active
+        background-color: #fff
+    .swiper-slide
+      width: 100%
+      overflow-x: hidden
+      background-color: #999999
+      .left-side
+        position: relative
+        height: 550px
+        display: flex
+        flex-direction: column
+        justify-content: center
+        img
+          position: absolute
+          left: 0
+          top: 0
+          height: 100%
+          z-index: 0
+          -webkit-user-drag: none
+        .slider-content
+          width: 366px
+          position: relative
+          z-index: 1
+          color: $whiteColor
+          margin-left: 90px
+          h2
+            font-size: 40px
+            font-weight: $semiBoldWeight
+            color: $whiteColor
+          p
+            font-weight: $lightWeight
+            font-size: 18px
+            margin:
+              top: 26px
+              bottom: 21px
+      .right-side
+        position: relative
+        height: 550px
+        width: 100%
+        img
+          position: absolute
+          left: 0
+          top: 0
+          height: 100%
+          width: 100%
+          z-index: 0
+          -webkit-user-drag: none
+  #podbor
+    margin-top: 100px
+    height: 340px
+    .row
+      background-image: url("../img/bg.png")
+      background-size: cover
+      background-color: #2152af
+      margin: auto
+    .left-side
+      height: 340px
+      display: flex
+      flex-direction: column
+      justify-content: center
+      .podbor-content
+        margin-left: 75px
+        color: #ffffff
+        h2
+          font-size: 30px
+        p
+          font-size: 18px
+          font-weight: $lightWeight
+          margin-top: 26px
+    .right-side
+      position: relative
+      img
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        display: block
+        margin: auto
+
+  #popular_goods
+    box-sizing: content-box
+    //height: 500px
+    padding-left: 5px
+    padding-right: 5px
+    padding-bottom: 10px
+    width: 1440px !important
+    overflow-x: hidden
+    margin:
+      left: auto
+      right: auto
+      top: 100px
+    &.container
+      padding: 0 !important
+    h2
+      font-size: 30px
+      font-weight: $semiBoldWeight
+    .swiper-goods-container
+      margin:
+        top: 35px
+        //left: auto
+        //right: auto
+      width: 100%
+      .swiper-button-prev, .swiper-button-next
+        background: none
+        outline: 0
+        height: 25px
+        width: 8px
+      .swiper-button-prev
+        left: 7px
+      .swiper-button-next
+        right: 7px
+      .swiper-slide
+        margin-top: 5px
+        height: 490px
+        &:hover
+          box-shadow: 0 4px 7px rgba(0, 0, 0, 0.15)
+        .slider2-content
+          margin: auto
+          //height: 490px
+          padding:
+            left: 15px
+            right: 15px
+          .upper-side
+            position: relative
+            height: 330px
+            width: 330px
+            background-color: #f2f2f2
+            .new
+              display: block
+              position: absolute
+              top: 20px
+              left: 0
+              width: 100px
+              height: 30px
+              text-align: center
+              line-height: 30px
+              background-color: $lightHoverColor
+              text-transform: uppercase
+              font-size: 10px
+              color: $whiteColor
+            img
+              display: block
+              position: absolute
+              top: 0
+              left: 0
+              right: 0
+              bottom: 0
+              margin: auto
+          .down-side
+            width: 100%
+            padding:
+              left: 7px
+              right: 7px
+            h4
+              height: 48px
+              margin-top: 12px
+              font-size: 18px
+              color: $defaultColor
+            .wrapper-price
+              margin-top: 12px
+              display: flex
+              justify-content: space-between
+              align-items: center
+              height: 40px
+              .price
+                .item-price
+                  display: block
+                  color: $lightHoverColor
+                  font-weight: $boldWeight
+                  font-size: 18px
+                .old-price
+                  display: block
+                  text-decoration: line-through
+                  font-size: 14px
+                  font-weight: $mainFontWeight
+                  color: $grayColor
+              .toBasket
+                button
+                  display: inline-block
+                  background: none
+                  border: 0
+                  outline: none
+                .compare-but
+                  vertical-align: bottom
+                  //display: block
+                  //position: relative
+                  border: 1px solid $lightHoverColor
+                  background: none
+                  width: 40px
+                  height: 40px
+                  cursor: pointer
+                  transition: background-color .2s
+                  &:hover
+                    background-color: $lightHoverColor
+                  &:hover .ic-charts:before
+                    color: $whiteColor
+                  .ic-charts::before
+                    color: $lightHoverColor
+                    transition: color .2s
+                .toBasket-but
+                  vertical-align: bottom
+                  text-transform: uppercase
+                  font-size: 14px
+                  width: 130px
+                  height: 40px
+                  border: 1px solid $lightHoverColor
+                  color: $lightHoverColor
+                  transition: background-color .2s, color .2s
+                  &:hover
+                    background-color: $lightHoverColor
+                    color: $whiteColor
+
+  #discounts
+    margin-top: 100px
+
 
 
 
