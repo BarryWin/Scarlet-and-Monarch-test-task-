@@ -15,7 +15,7 @@
 <header class="container">
     <section id="header_line">
         <div class="row justify-content-between">
-            <div class="col-md-6 left-side">
+            <div class="col-lg-6 col-md-7 left-side">
                 <ul>
                     <li>
                         <a href="javascript:void(0);">
@@ -36,9 +36,10 @@
                     </li>
                 </ul>
             </div>
-            <div class="col-md-6 right-side">
+            <div class="col-lg-6 col-md-5 right-side">
                 <ul>
                     <li>
+                        <span class="vert-separator md-screen"></span>
                         <a href="javascript:void(0);">Оплата</a>
                         <span class="vert-separator"></span>
                     </li>
@@ -53,23 +54,23 @@
             </div>
         </div>
     </section>
-    <section id="header-logo">
+    <section id="header-logo" class="container">
         <div class="row">
-            <div class="col-md-3 logo-col">
+            <div class="col-md-4 col-lg-3 logo-col">
                 <a href="index.html">
                     <img src="img/logo.svg" alt="logo">
                 </a>
             </div>
-            <div class="col-md-3 phone-col">
+            <div class="col-xl-3 col-lg-2 col-md-3 phone-col">
                 <p class="phone-number">(8184) 52-96-33</p>
             </div>
-            <div class="col-md-3 search-col">
+            <div class="col-lg-3 col-md-4 ml-md-auto search-col">
                 <form action="#" class="search">
                     <input type="text" placeholder="Искать" name="search">
                     <button type="submit" onclick="return false;"><i class="ic-search"></i></button>
                 </form>
             </div>
-            <div class="col-md-3 sign-in-col">
+            <div class="col-lg-4 col-xl-3 col-md-6 ml-md-auto sign-in-col">
                 <ul class="sign-in">
                     <li>
                         <a href=""><i class="ic-sign-in"></i>Вход/Регистрация</a>
@@ -320,6 +321,7 @@
     </section>
     <section id="discounts" class="container">
         <h2>Акции</h2>
+        <a href="#" class="all">Все акции <span>&#8250</span></a>
         <div class="discounts-wrapper">
             <div class="item-blog blog-1">
                 <div class="blog-content">
@@ -328,7 +330,7 @@
                     <a href="#more">Подробнее</a>
                 </div>
             </div>
-            <div class="item-blog blog-2">
+            <div class="item-blog blog-2 d-md-none d-lg-block">
                 <div class="blog-content">
                     <h3>Акция при покупке детских очков</h3>
                     <p>Оправа для очков со скидкой 50%</p>
@@ -341,7 +343,7 @@
 
     <section id="company" class="container">
         <div class="about-company row">
-            <div class="col-md-6 information">
+            <div class="col-lg-6 col-md-12 information">
                 <h2>О компании</h2>
                 <p>Открытие в 2003 году ООО” Оптик – Центр” стало большим событием в оказании медицинской помощи
                     населению города и предоставило возможность нашим клиентам проверить зрение без записи и
@@ -354,16 +356,16 @@
                     зрения и съездах офтальмологов России.</p>
                 <a href="#more">Подробнее</a>
             </div>
-            <div class="col-md-6 image d-sm-none d-md-block"></div>
+            <div class="col-lg-6 image d-md-none d-lg-block"></div>
         </div>
     </section>
 </main>
 <footer class="container">
-    <section id="footer-menu" class="row align-items-center">
-        <div class="col-md-3 logo">
+    <section id="footer-menu" class="row align-items-center justify-content-md-center">
+        <div class="col-md-4 col-lg-3 logo">
             <img src="img/logo.svg" alt="Logo">
         </div>
-        <div class="col-md-9 menu-links">
+        <div class="col-md-12 col-lg-9 menu-links">
             <ul>
                 <li><a href="">Каталог</a></li>
                 <li><a href="">ОМС</a></li>
@@ -402,7 +404,7 @@
         <div class="col-md-3 foot-col-4">
             <p>Подпишитесь на наши новости и акции,
                 чтобы быть в курсе</p>
-            <form action="" class="mail">
+            <form action="" class="mail d-md-none d-lg-block">
                 <input type="email" name="email" placeholder="Ваш e-mail">
                 <button class="email-btn"></button>
             </form>
@@ -411,11 +413,11 @@
         </div>
     </section>
     <section id="footer-bottom" class="row justify-content-between align-items-center">
-        <div class="col-md-6 terms-use">
+        <div class="col-md-12 col-lg-6 terms-use">
             <p>Интернет-магазин “Мода-оптик”. <a href="">Пользовательское соглашение</a>
                 <br> Имеются противопоказания, необходимо проконсультироваться со специалистом</p>
         </div>
-        <div class="col-md-3 credit-cards">
+        <div class="col-xl-3 col-lg-4 credit-cards">
             <span>Принимаем к оплате:</span>
             <img src="img/payments/visa.svg" alt="visa">
             <img src="img/payments/mastercard.svg" alt="">
