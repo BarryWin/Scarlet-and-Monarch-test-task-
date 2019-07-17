@@ -38,30 +38,31 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 1140px)
-  #header_line
-    font-size: 12px !important
-    .left-side
-      ul li
-        .vert-separator
-          margin-left: 10px !important
-          margin-right: 10px !important
-        &.social-links a:not(:last-child)
-          margin-right: 4px !important
-        a
-          .ic-glasses
-            margin-right: 5px !important
-          .ic-charts
-            margin-right: 5px !important
-          .ic-glasses, .ic-charts, .ic-instagram, .ic-twitter, .ic-vk
-            font-size: 14px !important
-    .right-side
-      ul li
-        .vert-separator
-          margin-left: 10px !important
-          margin-right: 10px !important
-  #menu
-    a
+  header
+    #header_line
       font-size: 12px !important
+      .left-side
+        ul li
+          .vert-separator
+            margin-left: 10px !important
+            margin-right: 10px !important
+          &.social-links a:not(:last-child)
+            margin-right: 4px !important
+          a
+            .ic-glasses
+              margin-right: 5px !important
+            .ic-charts
+              margin-right: 5px !important
+            .ic-glasses, .ic-charts, .ic-instagram, .ic-twitter, .ic-vk
+              font-size: 14px !important
+      .right-side
+        ul li
+          .vert-separator
+            margin-left: 10px !important
+            margin-right: 10px !important
+    #menu
+      a
+        font-size: 12px !important
   #slider
     .swiper-button-prev
       left: 25px !important
@@ -115,15 +116,203 @@
 /**/
 
 /* Small Devices, Tablets */
-@media only screen and (max-width : 768px)
+@media only screen and (max-width : 880px)
+  header
+    margin-top: 24px
+    #header-logo
+      .row
+        div[class^="col-"]
+          a
+            display: table-cell
+            vertical-align: middle
+            width: 100%
+            img
+              width: 100%
+          .search
+            width: calc(100% - 30px) !important
+            input[type="text"]
+              width: 100%
+    #menu
+      margin-top: 5px
+      margin-bottom: 30px
+      height: 0
+      visibility: hidden
+      .menu-grid
+        div
+          margin-top: 10px
+          padding-bottom: 10px
+          &:not(:last-child)
+            width: 180px
+            text-align: center
+            border-bottom: 1px solid #F2F2F2
+          a
+            font-size: 16px !important
+      &.hide-show
+        //visibility: hidden
+        height: 370px
+  main
+    margin-top: 0
+    #slider
+      .swiper-pagination
+        left: 90px
+        bottom: 10px !important
+      .swiper-slide
+        .left-side
+          //position: relative
+          width: 100% !important
+          height: 300px !important
+          img
+            width: 100%
+          .slider-content
+            margin: auto
+            padding-right: 60px !important
+            width: auto !important
+            margin-left: 55px !important
+            h2
+              font-size: 20px !important
+            p
+              font-size: 14px !important
+        .right-side
+          height: 340px !important
+    #podbor
+      height: 400px !important
+      .left-side
+        height: 300px !important
+        justify-content: flex-end
+        margin-bottom: 40px
+        .podbor-content
+          h2
+            font-size: 20px !important
+          p
+            font-size: 14px !important
+      .right-side
+        img
+          top: 200px
+          right: 200px
+          left: 40px
+          width: 200px !important
+    #popular_goods
+      margin-top: 0 !important
+      width: 540px !important
+  footer
+    #footer-menu
+      .menu-links
+        ul
+          flex-direction: column
+          align-items: center
+          width: 100%
+          li
+            padding:
+              top: 12px
+              bottom: 12px
+            text-align: center
+            width: 100%
+            border-bottom: 1px solid #F2F2F2
+    #footer-information
+      .foot-col-3
+        .social-links
+          margin-top: 30px
+          span
+            display: none
+    #footer-bottom
+      padding-top: 14px
+      border-top: 1px solid #F2F2F2
 
-  /**/
+/**/
 
 
 /* Extra Small Devices, Phones */
-@media only screen and (max-width : 480px)
+@media only screen and (max-width : 576px)
+  header
+    #header-logo
+      .row
+        .ic-burger
+          font-size: 20px
+  main
+    #slider
+      .swiper-pagination
+        left: 50%
+        transform: translateX(-50%)
+        bottom: 10px !important
+      .swiper-button-prev
+        left: 8px !important
+      .swiper-button-next
+        right: 8px !important
+      .swiper-slide
+        .left-side
+          .slider-content
+            margin-left: 32px !important
+    #podbor
+      height: 500px !important
+      margin-bottom: -120px
+      margin-top: 22px
+      .left-side
+        height: 350px
+        justify-content: flex-end
+        margin-bottom: 40px
+        .podbor-content
+          margin-left: 16px !important
+          margin-right: 16px !important
+      .right-side
+        img
+          top: 150px
+          right: 200px
+          left: 30px
+          width: 150px !important
+    #popular_goods
+      margin-top: 0 !important
+      width: 320px !important
+      h2
+        font-size: 18px
+      .swiper-goods-container
+        margin-top: 14px
+    #discounts
+      margin-top: 30px
+      h2
+        font-size: 18px
+        float: left
+        margin-bottom: 20px
+      a
+        font-size: 14px
+      .discounts-wrapper
+        .item-blog
+          width: 290px
+          height: 205px
+        .blog-content
+          padding: 10px 15px !important
+        h3
+          font-size: 14px !important
+        p
+          font-size: 12px !important
+          margin-top: 8px !important
+          margin-bottom: -2px
+        a
+          font-size: 10px !important
+          float: none
+    #company  //company block
+      margin-top: 100px
+      .about-company
+        .col-md-6
+        .information
+          padding:
+            top: 25px
+            left: 15px
+            right: 15px
+            bottom: 20px
+          h2
+            font-size: 18px !important
+          p
+            font-size: 14px !important
+            line-height: 20px
+          a
+            font-size: 10px !important
+  footer
+    #footer-bottom
+      .terms-use
+        font-size: 12px !important
 
-  /**/
+
+/**/
 
 
 /* Custom, iPhone Retina */

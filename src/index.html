@@ -13,7 +13,7 @@
 </head>
 <body>
 <header class="container">
-    <section id="header_line">
+    <section id="header_line" class="d-none d-md-block">
         <div class="row justify-content-between">
             <div class="col-lg-6 col-md-7 left-side">
                 <ul>
@@ -54,37 +54,38 @@
             </div>
         </div>
     </section>
-    <section id="header-logo" class="container">
+    <section id="header-logo">
         <div class="row">
-            <div class="col-md-4 col-lg-3 logo-col">
+            <div id="toggle-btn" class="col-1 d-md-none"><i class="ic-burger"></i></div>
+            <div class="col-md-4 col-lg-3 col-5 logo-col">
                 <a href="index.html">
                     <img src="img/logo.svg" alt="logo">
                 </a>
             </div>
-            <div class="col-xl-3 col-lg-2 col-md-3 phone-col">
+            <div class="col-xl-3 col-lg-2 col-md-3 d-none d-md-table phone-col">
                 <p class="phone-number">(8184) 52-96-33</p>
             </div>
-            <div class="col-lg-3 col-md-4 ml-md-auto search-col">
+            <div class="col-lg-3 col-md-4 col-12 ml-md-auto search-col order-2 order-md-1">
                 <form action="#" class="search">
                     <input type="text" placeholder="Искать" name="search">
                     <button type="submit" onclick="return false;"><i class="ic-search"></i></button>
                 </form>
             </div>
-            <div class="col-lg-4 col-xl-3 col-md-6 ml-md-auto sign-in-col">
+            <div class="col-lg-4 col-xl-3 col-md-6 col-5 ml-auto sign-in-col order-1 order-md-2">
                 <ul class="sign-in">
                     <li>
-                        <a href=""><i class="ic-sign-in"></i>Вход/Регистрация</a>
-                        <span class="vert-separator"></span>
+                        <a href=""><i class="ic-sign-in"></i><span class="d-none d-md-inline">Вход/Регистрация</span></a>
+                        <span class="vert-separator d-none d-md-inline-block"></span>
                     </li>
                     <li>
-                        <a href=""><i class="ic-basket"></i>Корзина <p class="counter">(10)</p></a>
+                        <a href=""><i class="ic-basket"></i><span class="basket d-none d-md-inline">Корзина </span><span class="counter">(10)</span></a>
                     </li>
                 </ul>
             </div>
         </div>
     </section>
-    <section id="menu">
-        <div class="menu-grid row justify-content-between">
+    <section id="menu" class="">
+        <div class="menu-grid row justify-content-between align-items-center flex-column flex-md-row">
             <div class="col-auto">
                 <a href="#">Каталог</a>
             </div>
@@ -121,7 +122,7 @@
                 <!-- Slides -->
                 <div class="swiper-slide">
                     <div class="row slider-block1">
-                        <div class="col-md-5 left-side">
+                        <div class="col-md-5 col-12 left-side">
                             <img src="img/slider1/bc-img.png" alt="bc">
                             <div class="slider-content">
                                 <h2>Новая коллекция
@@ -131,7 +132,7 @@
                                 <a href="javascript:void(0);" class="button">Перейти в каталог</a>
                             </div>
                         </div>
-                        <div class="col-md-7 right-side">
+                        <div class="col-md-7 d-none d-md-block right-side">
                             <img src="img/slider1/devka1.png" alt="bc">
                         </div>
                     </div>
@@ -139,7 +140,7 @@
 
                 <div class="swiper-slide">
                     <div class="row slider-block1">
-                        <div class="col-md-5 left-side">
+                        <div class="col-md-5 col-12 left-side">
                             <img src="img/slider1/bc-img.png" alt="bc">
                             <div class="slider-content">
                                 <h2>Fashion collection dolor sit amet.</h2>
@@ -148,14 +149,14 @@
                                 <a href="javascript:void(0);" class="button">Перейти в каталог</a>
                             </div>
                         </div>
-                        <div class="col-md-7 right-side">
+                        <div class="col-md-7 d-none d-md-block right-side">
                             <img src="img/slider1/devka2.png" alt="bc">
                         </div>
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <div class="row slider-block1">
-                        <div class="col-md-5 left-side">
+                        <div class="col-md-5 col-12 left-side">
                             <img src="img/slider1/bc-img.png" alt="bc">
                             <div class="slider-content">
                                 <h2>Fashion collection dolor sit amet.</h2>
@@ -164,7 +165,7 @@
                                 <a href="javascript:void(0);" class="button">Перейти в каталог</a>
                             </div>
                         </div>
-                        <div class="col-md-7 right-side">
+                        <div class="col-md-7 d-none d-md-block right-side">
                             <img src="img/slider1/devka3.png" alt="bc">
                         </div>
                     </div>
@@ -190,7 +191,7 @@
     </section>
     <section id="podbor" class="container">
         <div class="row">
-            <div class="col-md-6 left-side">
+            <div class="col-md-6 left-side order-2 order-md-1">
                 <div class="podbor-content">
                     <h2>Подбор очков</h2>
                     <p>Поможем Вам подобрать очки, с нужными характеристиками
@@ -198,7 +199,7 @@
                     <a href="javascript:void(0);" class="button">Подобрать</a>
                 </div>
             </div>
-            <div class="col-md-6 right-side">
+            <div class="col-md-6 right-side order-1 order-md-2">
                 <img src="img/glasses.png" alt="очки">
             </div>
         </div>
@@ -330,7 +331,7 @@
                     <a href="#more">Подробнее</a>
                 </div>
             </div>
-            <div class="item-blog blog-2 d-md-none d-lg-block">
+            <div class="item-blog blog-2 d-none d-lg-block">
                 <div class="blog-content">
                     <h3>Акция при покупке детских очков</h3>
                     <p>Оправа для очков со скидкой 50%</p>
@@ -351,7 +352,7 @@
                 <p>Основным направлением нашей деятельности является оказание качественных услуг по проверке зрения,
                     подбору контактных линз и диагностике заболеваний глаз. Мы ведем индивидуальную работу с каждым
                     клиентом, независимо от возраста и социального статуса.</p>
-                <p>Наши высококвалифицированные специалисты имеют большой опыт работы в сфере здравоохранения, решают
+                <p class="d-none d-sm-block">Наши высококвалифицированные специалисты имеют большой опыт работы в сфере здравоохранения, решают
                     различные проблемы со зрением, постоянно участвуют в семинарах по современным методам коррекции
                     зрения и съездах офтальмологов России.</p>
                 <a href="#more">Подробнее</a>
@@ -362,7 +363,7 @@
 </main>
 <footer class="container">
     <section id="footer-menu" class="row align-items-center justify-content-md-center">
-        <div class="col-md-4 col-lg-3 logo">
+        <div class="col-md-4 col-lg-3 logo text-center">
             <img src="img/logo.svg" alt="Logo">
         </div>
         <div class="col-md-12 col-lg-9 menu-links">
@@ -378,20 +379,20 @@
         </div>
     </section>
     <section id="footer-information" class="row">
-        <div class="col-md-3 foot-col-1">
+        <div class="col-md-3 foot-col-1 d-none d-md-block">
             <p>ООО «Оптик-Центр» <br> ОГРН 1032901007853</p>
             <p>164500, г. Северодвинск,
                 ул. Ломоносова, д. 73</p>
             <p>Информация на сайте не является публичной офертой и носит справочный характер. </p>
 
         </div>
-        <div class="col-md-3 foot-col-2">
+        <div class="col-md-3 foot-col-2 d-none d-md-block">
             <h4>Магазины</h4>
             <p>164500, г. Северодвинск, ул. Советская, д. 50/12</p>
             <p>163000, г. Архангельск, ул. набережная Северной Двины, д. 93</p>
         </div>
-        <div class="col-md-3 foot-col-3">
-            <h4>Контактная информация</h4>
+        <div class="col-md-3 foot-col-3 col-12 text-center text-md-left">
+            <h4 class="d-none d-md-block">Контактная информация</h4>
             <p class="phone-number">(8184) 52-96-33</p>
             <a href="">office@moda-optic.ru</a>
             <div class="social-links">
@@ -401,10 +402,10 @@
                 <a href=""><i class="ic-vk"></i></a>
             </div>
         </div>
-        <div class="col-md-3 foot-col-4">
+        <div class="col-md-3 foot-col-4 d-none d-md-block">
             <p>Подпишитесь на наши новости и акции,
                 чтобы быть в курсе</p>
-            <form action="" class="mail d-md-none d-lg-block">
+            <form action="" class="mail d-md-none d-lg-flex">
                 <input type="email" name="email" placeholder="Ваш e-mail">
                 <button class="email-btn"></button>
             </form>
@@ -415,9 +416,9 @@
     <section id="footer-bottom" class="row justify-content-between align-items-center">
         <div class="col-md-12 col-lg-6 terms-use">
             <p>Интернет-магазин “Мода-оптик”. <a href="">Пользовательское соглашение</a>
-                <br> Имеются противопоказания, необходимо проконсультироваться со специалистом</p>
+                <br> <span class="d-none d-md-inline">Имеются противопоказания, необходимо проконсультироваться со специалистом</span></p>
         </div>
-        <div class="col-xl-3 col-lg-4 credit-cards">
+        <div class="col-xl-3 col-lg-4 credit-cards d-none d-md-block">
             <span>Принимаем к оплате:</span>
             <img src="img/payments/visa.svg" alt="visa">
             <img src="img/payments/mastercard.svg" alt="">

@@ -1,5 +1,6 @@
 //swiper
 import Swiper from '../libs/swiper/dist/js/swiper.min';
+
 var mySwiper = new Swiper('.swiper-container', {
     loop: true,
     pagination: {
@@ -17,8 +18,8 @@ var mySwiper = new Swiper('.swiper-container', {
 });
 //swiper autoplay disabled onmouseover
 let slider = document.getElementById("slider");
-    slider.addEventListener("mouseover", () => mySwiper.autoplay.stop());
-    slider.addEventListener("mouseout", () => mySwiper.autoplay.start());
+slider.addEventListener("mouseover", () => mySwiper.autoplay.stop());
+slider.addEventListener("mouseout", () => mySwiper.autoplay.start());
 
 
 var swiper2 = new Swiper('.swiper-goods-container', {
@@ -36,9 +37,13 @@ var swiper2 = new Swiper('.swiper-goods-container', {
             slidesPerView: 3,
             spaceBetween: 7
         },
-        // when window width is <= 320px
+        // when window width is >= 880px
         880: {
             slidesPerView: 2,
+            spaceBetween: 7
+        },
+        0: {
+            slidesPerView: 1,
             spaceBetween: 7
         },
     },
@@ -55,5 +60,37 @@ var swiper2 = new Swiper('.swiper-goods-container', {
 });
 //swiper autoplay disabled onmouseover
 let slider2 = document.getElementById("popular_goods");
-    slider2.addEventListener("mouseover", () => swiper2.autoplay.stop());
-    slider2.addEventListener("mouseout", () => swiper2.autoplay.start());
+slider2.addEventListener("mouseover", () => swiper2.autoplay.stop());
+slider2.addEventListener("mouseout", () => swiper2.autoplay.start());
+
+
+//toggle-btn
+let toggle = document.getElementById("toggle-btn");
+let menu = document.getElementById('menu');
+
+//menuSlideDown
+toggle.addEventListener('click', function () {
+        menu.classList.toggle('hide-show');
+        setTimeout( () => {
+            if (menu.style.visibility === "visible") {
+                setTimeout(() =>
+                    menu.style.visibility = "hidden", 300)
+            } else {
+                menu.style.visibility = "visible";
+            }
+        }, 50);
+    }
+);
+
+//responsiveMenuClass
+let respMenu = document.getElementsByClassName('hide-show')
+//menu on resize
+window.onresize = () => {
+    if (window.innerWidth >= 880){
+        menu.style.visibility = "visible";
+    }else if(window.innerWidth <= 880 && menu.className !== 'hide-show'){
+        menu.classList.remove('hide-show');
+        menu.style.visibility = "hidden";
+
+    }
+};
