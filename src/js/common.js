@@ -82,8 +82,6 @@ toggle.addEventListener('click', function () {
     }
 );
 
-//responsiveMenuClass
-let respMenu = document.getElementsByClassName('hide-show')
 //menu on resize
 window.onresize = () => {
     if (window.innerWidth >= 880){
