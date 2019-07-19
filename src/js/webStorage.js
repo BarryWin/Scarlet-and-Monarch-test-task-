@@ -1,4 +1,3 @@
-
 //Created class that puts element's data-id attr into localStorage
 class ServiceStore {
     constructor() {
