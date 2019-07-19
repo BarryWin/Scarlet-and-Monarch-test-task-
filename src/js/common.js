@@ -1,3 +1,5 @@
+import '../js/webStorage'
+
 //swiper
 import Swiper from '../libs/swiper/dist/js/swiper.min';
 
@@ -21,11 +23,13 @@ let slider = document.getElementById("slider");
 slider.addEventListener("mouseover", () => mySwiper.autoplay.stop());
 slider.addEventListener("mouseout", () => mySwiper.autoplay.start());
 
-
+//popular products swiper
 var swiper2 = new Swiper('.swiper-goods-container', {
     loop: true,
     slidesPerView: 'auto',
     breakpointsInverse: true,
+    observer: true,
+    observerUpdate: true,
     breakpoints: {
         // when window width is >= 1500px
         1500: {
@@ -58,6 +62,7 @@ var swiper2 = new Swiper('.swiper-goods-container', {
         delay: 5000,
     },
 });
+
 //swiper autoplay disabled onmouseover
 let slider2 = document.getElementById("popular_goods");
 slider2.addEventListener("mouseover", () => swiper2.autoplay.stop());
@@ -72,15 +77,11 @@ let menu = document.getElementById('menu');
 toggle.addEventListener('click', function () {
         menu.classList.toggle('hide-show');
         setTimeout( () => {
-            if (menu.style.visibility === "visible") {
-                setTimeout(() =>
-                    menu.style.visibility = "hidden", 300)
-            } else {
-                menu.style.visibility = "visible";
-            }
-        }, 50);
-    }
-);
+            (menu.style.visibility === "visible") ?
+                setTimeout(() => menu.style.visibility = "hidden", 300)
+                :menu.style.visibility = "visible";}, 50);
+});
+
 
 //menu on resize
 window.onresize = () => {
@@ -89,6 +90,5 @@ window.onresize = () => {
     }else if(window.innerWidth <= 880 && menu.className !== 'hide-show'){
         menu.classList.remove('hide-show');
         menu.style.visibility = "hidden";
-
     }
 };
